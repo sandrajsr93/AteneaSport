@@ -12,6 +12,5 @@ public class AteneaSportApplication {
 		SpringApplication.run(AteneaSportApplication.class, args);
 	}
 	
-	
 
 }
