@@ -15,6 +15,7 @@
     <div class="header-bottom">
 		 <div class="container">
 			<div class="header-bottom_left">
+				<div class="header-bottom_left">
 				<i class="phone"> </i><span>626700368</span>
 			</div>
 			<div class="social">	
@@ -40,12 +41,12 @@
 		 <div class="h_menu4"><!-- start h_menu4 -->
 		   <a class="toggleMenu" href="#">Menu</a>
 			 <ul class="nav">
-			    <li><a href="index.html">Menu</a></li>
+			   <li><a href="index.html">Menu</a></li>
 			   <li><a href="calendario.html">Calendario</a></li>
-			   <li><a href="classes.html">Plan personalizado</a></li>
-			   <li><a href="classes.html">Clases</a></li>
+			   <li class="active"><a href="planpersonalizado.html">Plan personalizado</a></li>
+			   <li><a href="classes.html">Clases</a>
 			   <li><a href="pricing.html">Tarifas</a></li>
-			   <li class="active"><a href="login.html">Login</a></li>
+			   <li><a href="login.html">Login</a></li>
 			   <li><a href="contact.html">Contacto</a></li>
 			   <li><a href="about.html">Sobre nosotros</a></li>
 			 </ul>
@@ -55,51 +56,85 @@
 	  </div>
 	</div>
 	<!-- end menu -->
-       <div class="main">
-          <div class="login_top">
+        <div class="main">
+          <div class="register-grids">
           	<div class="container">
-			  <div class="col-md-6">
-				 <div class="login-page">
-					<h4 class="title">Nuevos Usuarios</h4>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-					<div class="button1">
-					   <a href="register.html"><input type="submit" name="Submit" value="Create an Account"></a>
-					 </div>
-					 <div class="clear"></div>
-				  </div>
-				</div>
-				<div class="col-md-6">
-				 <div class="login-page">
-				  <div class="login-title">
-	           		<h4 class="title">Clientes Registrados</h4>
-					<div id="loginbox" class="loginbox">
-						<form action="" method="post" name="login" id="login-form">
-						  <fieldset class="input">
-						    <p id="login-form-username">
-						      <label for="modlgn_username">Email</label>
-						      <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
-						    </p>
-						    <p id="login-form-password">
-						      <label for="modlgn_passwd">Password</label>
-						      <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
-						    </p>
-						    <div class="remember">
-							    <p id="login-form-remember">
-							      <label for="modlgn_remember"><a href="#">¿Olvidaste tu contraseña? </a></label>
-							   </p>
-							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
-							 </div>
-						  </fieldset>
-						 </form>
+						<form> 
+								<div class="register-top-grid">
+										<h3>PERSONAL INFORMATION</h3>
+										<div>
+											<span>Primer Nombre<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>Apellidos<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>Dirección de correo electrónico<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Cuál es tu edad?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Cuál es tu altura?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Cuál es tu peso?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Tienes alguna enfermedad?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Tienes alguna alergia alimentaria?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Tienes algún alimento que no puedes comer?(religión, hábitos, etc..)<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Qué alimentos no quieres comer?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Qué alimento/s son imprescindibles para ti?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Con qué frecuencia haces deporte a la semana?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Qué deporte prácticas?<label>*</label></span>
+											<input type="text"> 
+										</div>
+										<div>
+											<span>¿Cuál es tu objetivo?(Debe ser un objetivo realista)<label>*</label></span>
+											<input type="text"> 
+										</div>
+											<!-- <a class="news-letter" href="#">
+												<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
+											</a> -->
+										<div class="clear"> </div>
+								</div>
+								<div class="clear"> </div>
+								<div class="register-bottom-grid">
+										<div class="clear"> </div>
+								</div>
+								<div class="clear"> </div>
+								<input type="submit" value="Enviar Cuestionario">
+						</form>
 					</div>
-			      </div>
 				</div>
-				<div class="clear"></div>
-			  </div>
-			</div>
-		  </div>
          </div>
-       <div class="footer-bottom">
+         </div>
+          <div class="footer-bottom">
 		   <div class="container">
 		 	 <div class="row section group">
 				<div class="col-md-4">
@@ -128,6 +163,13 @@
 						<li><a href="#">Clases</a></li>
 						<li><a href="#">Dietista</a></li>
 						<li><a href="#">Contacto</a></li>
+					</ul>
+				 <ul class="list1">
+						<h4 class="m_7">Community</h4>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Forum</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Newsletter</a></li>
 					</ul>
 				</div>
 				<div class="clear"></div>
