@@ -1,9 +1,10 @@
-/*
- * package com.atenea.controllers;
- * 
- * import org.springframework.stereotype.Controller;
- * 
- * @Controller public class LoginController {
- * 
- * }
- */
+
+  package com.atenea.controllers;
+  
+  import org.springframework.stereotype.Controller;
+  
+  @Controller 
+  public class LoginController {
+  
+  }
+ 

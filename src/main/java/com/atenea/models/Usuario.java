@@ -1,7 +1,7 @@
-/*
- * package com.atenea.models;
- * 
- * public class Usuario {
- * 
- * }
- */
+
+  package com.atenea.models;
+  
+  public class Usuario {
+  
+  }
+ 
