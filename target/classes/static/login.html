@@ -61,7 +61,7 @@
 			  <div class="col-md-6">
 				 <div class="login-page">
 					<h4 class="title">Nuevos Usuarios</h4>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+					<p>Si aún no estas registrado con nosotros, no pierdas más el tiempo y disfruta de todas nuestras ventajas</p>
 					<div class="button1">
 					   <a href="register.html"><input type="submit" name="Submit" value="Create an Account"></a>
 					 </div>
@@ -73,20 +73,20 @@
 				  <div class="login-title">
 	           		<h4 class="title">Clientes Registrados</h4>
 					<div id="loginbox" class="loginbox">
-						<form action="" method="post" name="login" id="login-form">
+						<form action="/login" method="post" >
 						  <fieldset class="input">
 						    <p id="login-form-username">
 						      <label for="modlgn_username">Email</label>
-						      <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
+						      <input type="text" placeholder="Email" name=email class="form-control">
 						    </p>
 						    <p id="login-form-password">
 						      <label for="modlgn_passwd">Password</label>
-						      <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
+						      <input type="text" placeholder="Pass" name=pass class="form-control">
 						    </p>
+						    
+						    <input type="hidden" name="_csrf" value={{token}}>	
+						    
 						    <div class="remember">
-							    <p id="login-form-remember">
-							      <label for="modlgn_remember"><a href="#">¿Olvidaste tu contraseña? </a></label>
-							   </p>
 							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
 							 </div>
 						  </fieldset>
