@@ -24,42 +24,35 @@ public class UsuarioRepositoryAuthProvider implements AuthenticationProvider{
 
 	@Autowired
 	private ClienteRepository userRepository;
-	
-	
+		
 	@Override
 	public Authentication authenticate(Authentication auth) throws AuthenticationException {
-	
-		
+			
 		String email = auth.getName();//getEmail
 
 		Cliente user = userRepository.findByEmail(email);
 	 
-		 if (user == null) {
+		if (user == null) {
 			 throw new BadCredentialsException("Usuario no encontrado");
-		 }
+		}
 		 
-		 String password = (String) auth.getCredentials();
+		String password = (String) auth.getCredentials();
 		 if (!new BCryptPasswordEncoder().matches(password, user.getPasswordHash())) {
 			 throw new BadCredentialsException("Contraseña erronera");
-		 }
+		}
 	
-		 List<GrantedAuthority> roles = new ArrayList<>();
+		List<GrantedAuthority> roles = new ArrayList<>();
 		 
-		 String role = user.getRoles()	;
-		 roles.add(new SimpleGrantedAuthority(role));
+		String role = user.getRoles();
+		roles.add(new SimpleGrantedAuthority(role));
 		 
-//		 for (String role : user.getRoles()) {
-//			 roles.add(new SimpleGrantedAuthority(role));
-//		 }
-		 
-		 return new UsernamePasswordAuthenticationToken(user.getEmail(), password, roles);
-		 }	
+		return new UsernamePasswordAuthenticationToken(user.getEmail(), password, roles);
+}	
 	
 	@Override
 	public boolean supports(Class<?> authenticationObject) {
 		return true;
 	}
 	
-
 }
 

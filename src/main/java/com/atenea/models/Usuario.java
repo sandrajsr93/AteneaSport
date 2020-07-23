@@ -14,7 +14,6 @@ public class Usuario {
 	private long idusuario;
 	private String nombre;
 	private String apellido;
-//	private String contrasena;
 	private String email; 
 	private String tarifa;
 	private String contrasena;
@@ -35,7 +34,6 @@ public class Usuario {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
-//		this.contrasena = contrasena;
 		this.contrasena = new BCryptPasswordEncoder().encode(contrasena);
 }
 

@@ -12,15 +12,17 @@ public class AteneaSportApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AteneaSportApplication.class, args);
 	}
+		
 	
-	@GetMapping("/")
-	public String index(Model model) {
-		return "index";
-	}
 	
-	@GetMapping("/sobre")
-	public String principal(Model model) {
-		return "about";
-	}
+//	@GetMapping("/")
+//	public String index(Model model) {
+//		return "index";
+//	}
+//	
+//	@GetMapping("/sobre")
+//	public String principal(Model model) {
+//		return "about";
+//	}
 	
 }

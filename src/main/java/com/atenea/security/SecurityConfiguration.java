@@ -54,17 +54,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 	}
 
-	
-//	  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//	  
-//	  // User
-//	  auth.inMemoryAuthentication().withUser("user").password("pass").roles("USER");
-//	  
-//	  //Database authentication provider
-//	  auth.authenticationProvider(authenticationProvider); 
-//	  }
-	 
-	
 }
 
 
