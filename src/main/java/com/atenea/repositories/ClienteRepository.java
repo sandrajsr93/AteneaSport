@@ -18,9 +18,9 @@ public interface ClienteRepository extends JpaRepository <Cliente, String>{
 //	@Cacheable
 	Cliente findByNombre(String nombre);
 	
-	Cliente findByEmailAndContrasena(String email,String contrasena);
+	//Cliente findByEmailAndContrasena(String email,String contrasena);
 	
 ////	@CacheEvict
-//	Usuario findByEmailAndPasswordHash (String email,String contrasena);
+	Cliente findByEmailAndPasswordHash (String email,String contrasena);
 	
 }

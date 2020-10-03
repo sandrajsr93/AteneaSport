@@ -11,9 +11,9 @@ public class Cliente extends Usuario{
 	
 	private String tarifa;
 	
-	@ElementCollection(fetch = FetchType.EAGER)
-	private String roles;
-
+//	@ElementCollection(fetch = FetchType.EAGER)
+//	private List<String> roles;
+	
 	public Cliente() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -21,11 +21,11 @@ public class Cliente extends Usuario{
 
 
 	public Cliente(long idusuario, String nombre, String apellido, 
-					String email, String contrasena,String tarifa, String roles) {
+					String email, String contrasena,String tarifa, String... roles) {
 		
-		super(idusuario, nombre, apellido, email, contrasena);
+		super(idusuario, nombre, apellido, email, contrasena,roles);
 		this.tarifa = tarifa;
-		this.roles = roles;
+		//this.roles = roles;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -37,11 +37,11 @@ public class Cliente extends Usuario{
 		this.tarifa = tarifa;
 	}
 
-	public String getRoles() {
-		return roles;
-	}
-
-	public void setRoles(String roles) {
-		this.roles = roles;
-	}
+//	public List<String> getRoles() {
+//		return roles;
+//	}
+//
+//	public void setRoles(List<String> roles) {
+//		this.roles = roles;
+//	}
 }

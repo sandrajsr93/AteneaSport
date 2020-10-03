@@ -17,7 +17,7 @@ public class Usuario {
 //	private String contrasena;
 	private String email; 
 	private String tarifa;
-	private String contrasena;
+	private String passwordHash;
 	
 	@OneToOne()
 	private Formulario formulario;
@@ -29,16 +29,28 @@ public class Usuario {
 	public Usuario() {}
 		
 	public Usuario(long idusuario, String nombre, String apellido,  String email, 
-					String contrasena) {
+					String contrasena,String... roles) {
 		super();
 		this.idusuario = idusuario;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
 //		this.contrasena = contrasena;
-		this.contrasena = new BCryptPasswordEncoder().encode(contrasena);
+		this.passwordHash = new BCryptPasswordEncoder().encode(passwordHash); 
+		this.roles = new ArrayList<>(Arrays.asList(roles));
+
 }
 
+
+	public Formulario getFormulario() {
+		return formulario;
+	}
+
+	public void setFormulario(Formulario formulario) {
+		this.formulario = formulario;
+	}
+
+	
 
 	public long getIdusuario() {
 		return idusuario;
@@ -70,16 +82,6 @@ public class Usuario {
 	}
 
 
-	public String getContrasena() {
-		return contrasena;
-	}
-
-
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
-
-
 	public String getEmail() {
 		return email;
 	}
@@ -100,8 +102,19 @@ public class Usuario {
 	}
 
 	public String getPasswordHash() {
-		// TODO Auto-generated method stub
-		return null;
+		return passwordHash;
+	}
+	
+	public void setPasswordHash(String passwordHash) {
+		this.passwordHash = passwordHash;
+	} 
+	
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
 
 

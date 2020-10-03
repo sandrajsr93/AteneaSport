@@ -10,7 +10,7 @@ import javax.persistence.FetchType;
 public class NoCliente extends Usuario{
 	
 	@ElementCollection(fetch = FetchType.EAGER)
-	private List<String> roles;
+	private String[] roles;
 
 	public NoCliente() {
 		super();
@@ -19,22 +19,22 @@ public class NoCliente extends Usuario{
 	
 	public NoCliente(List<String> roles) {
 		super();
-		this.roles = roles;
+		//this.roles = roles;
 	}
 
 	public NoCliente(long idusuario, String nombre, String apellido, 	
-			String email, String contrasena,List<String> roles) {
-		super(idusuario, nombre, apellido, email, contrasena);
-		this.roles = roles;
+			String email, String contrasena,String... roles) {
+		super(idusuario, nombre, apellido, email, contrasena, roles);
+		//this.roles = roles;
 		// TODO Auto-generated constructor stub
 	}
 
-	public List<String> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<String> roles) {
-		this.roles = roles;
-	}
-	
+//	public List<String> getRoles() {
+//		return roles;
+//	}
+//
+//	public void setRoles(List<String> roles) {
+//		this.roles = roles;
+//	}
+//	
 }

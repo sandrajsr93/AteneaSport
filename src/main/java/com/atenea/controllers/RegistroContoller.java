@@ -20,7 +20,7 @@ public class RegistroContoller {
 							@RequestParam String apellidos, @RequestParam String email, 
 							@RequestParam String pass) {
 		//Si el usuario no esta registrado que te lleve a login
-		if (clienteRepository.findByEmailAndContrasena(email, pass) == null) {
+		if (clienteRepository.findByEmailAndPasswordHash(email, pass) == null) {
 			//Alta del Cliente
 			Cliente nuevoCliente = new Cliente (0 , nombre, apellidos, email, pass, null, "ROLE_CLIENTE");
 			clienteRepository.save(nuevoCliente);
